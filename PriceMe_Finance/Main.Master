@@ -1,0 +1,87 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="EasyRate.Main" %>
+
+<%@ Register Src="~/Modules/Top/TopNavigation.ascx" TagName="TopNavigation" TagPrefix="DK" %>
+<%@ Register Src="~/Modules/Footer/Footer.ascx" TagName="Footer" TagPrefix="DK" %>
+<%@ Register Src="~/Modules/Footer/BottomBar.ascx" TagName="BottomBar" TagPrefix="DK" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <%--<iframe src="http://au.adserver.yahoo.com/a?f=2145936128&p=nzdeals&l=HEAD&c=sh&bg=ffffff"
+        marginwidth="0" marginheight="0" width="100%" height="81" hspace="0" vspace="0"
+        frameborder="0" scrolling="no"></iframe>--%>
+    <form id="form1" runat="server">
+    <div id="mainDiv">
+        <DK:TopNavigation ID="TopNavigation" runat="server" />
+        <div id="ContentDiv">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <DK:Footer ID="Footer" runat="server" />
+    </div>
+    </form>
+    <script type="text/javascript" charset="utf-8">        var is_ssl = ("https:" == document.location.protocol); var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/"; document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E")); </script>
+    <%--feedback--%>
+   <%-- <script type="text/javascript" charset="utf-8">              
+        var feedback_widget_options = {};
+
+        feedback_widget_options.display = "overlay";
+        feedback_widget_options.company = "priceme"; feedback_widget_options.placement = "right"; feedback_widget_options.color = "#ff7427"; feedback_widget_options.style = "problem";
+
+        var feedback_widget = new GSFN.feedback_widget(feedback_widget_options); </script>--%>
+   <%-- <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-1779958-2']);
+        _gaq.push(['_trackPageview']);
+        _gaq.push(['_trackPageLoadTime']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();    
+
+    </script>--%>
+        <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-1779958-16']); 
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; 
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+</script>
+
+    <%--<iframe src="http://au.adserver.yahoo.com/a?f=2145936128&p=nzdeals&l=FOOT&c=h&bg=ffffff"
+        marginwidth="0" marginheight="0" width="100%" height="326" hspace="0" vspace="0"
+        frameborder="0" scrolling="no"></iframe>--%>
+    <!-- Yahoo! Web Analytics - All rights reserved -->
+    <%--<script type="text/javascript" src="http://d.yimg.com/mi/ywa.js"></script>
+    <script type="text/javascript">
+        var YWATracker = YWA.getTracker("1000673714162");
+        YWATracker.submit();
+    </script>
+    <noscript>
+        <div>
+            <img src="http://a.analytics.yahoo.com/p.pl?a=1000673714162&js=no" width="1" height="1"
+                alt="" /></div>
+    </noscript>
+    <script type="text/javascript">        var _rsCI = "nz-yahoo"; var _rsCG = "0"; var _rsIMG = new Image(1, 1); _rsIMG.src = "//secure-nz.imrworldwide.com/cgi-bin/m?rnd=" + (new Date()).getTime() + "&ci=" + _rsCI + "&cg=" + _rsCG + "&si=" + escape(window.location.href) + "&rp=" + escape(document.referrer) + "&cc=1";</script>
+    <noscript>
+        <div>
+            <img src="//secure-nz.imrworldwide.com/cgi-bin/m?ci=nz-yahoo&amp;cg=0&amp;cc= 1"
+                alt="" /></div>
+    </noscript>--%>
+    <%--<div id="PopUpBGDiv"></div>--%>
+</body>
+</html>
